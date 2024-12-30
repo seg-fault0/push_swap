@@ -6,7 +6,7 @@
 /*   By: wimam <walidimam69gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 13:54:14 by wimam             #+#    #+#             */
-/*   Updated: 2024/12/30 15:31:45 by wimam            ###   ########.fr       */
+/*   Updated: 2024/12/30 17:51:10 by wimam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,12 @@ typedef	struct
 	unsigned int	size_b;
 }t_ps;
 
-
 void	ft_putstr(char *str);
 int		ft_atoi(char *str);
+void	ft_get_arr(t_ps *arr, char **buffer);
+void	ft_sort(t_ps *arr);
+t_ps	*ft_init(int size, char **buffer);
+void	ft_exit(t_ps *arr);
 void	pa(t_ps *arr);
 void	pb(t_ps *arr);
 void	sa(t_ps *arr);
