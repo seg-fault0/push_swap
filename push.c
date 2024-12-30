@@ -6,7 +6,7 @@
 /*   By: wimam <walidimam69gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 13:53:58 by wimam             #+#    #+#             */
-/*   Updated: 2024/12/30 15:21:34 by wimam            ###   ########.fr       */
+/*   Updated: 2024/12/30 15:33:23 by wimam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	pa(t_ps *arr)
 {
-	int	i;
+	unsigned int	i;
 
 	i = arr->size_a;
 	while(i > 0)
@@ -35,7 +35,7 @@ void	pa(t_ps *arr)
 
 void	pb(t_ps *arr)
 {
-	int	i;
+	unsigned int	i;
 
 	i = arr->size_b;
 	while (i > 0)
