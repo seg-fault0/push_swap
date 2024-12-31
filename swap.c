@@ -6,7 +6,7 @@
 /*   By: wimam <walidimam69gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 13:54:05 by wimam             #+#    #+#             */
-/*   Updated: 2024/12/30 15:10:45 by wimam            ###   ########.fr       */
+/*   Updated: 2024/12/31 17:45:29 by wimam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void	sb(t_ps *arr)
 
 void	ss(t_ps *arr)
 {
-	int tmp;
+	int	tmp;
 
 	tmp = arr->arr_a[0];
 	arr->arr_a[0] = arr->arr_a[1];

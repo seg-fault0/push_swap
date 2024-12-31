@@ -6,7 +6,7 @@
 /*   By: wimam <walidimam69gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 13:53:58 by wimam             #+#    #+#             */
-/*   Updated: 2024/12/30 15:33:23 by wimam            ###   ########.fr       */
+/*   Updated: 2024/12/31 17:44:30 by wimam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,16 +17,16 @@ void	pa(t_ps *arr)
 	unsigned int	i;
 
 	i = arr->size_a;
-	while(i > 0)
+	while (i > 0)
 	{
 		arr->arr_a[i] = arr->arr_a[i - 1];
 		i--;
 	}
 	arr->arr_a[i] = arr->arr_b[i];
-	while(i < arr->size_b - 1)
+	while (i < arr->size_b - 1)
 	{
 		arr->arr_b[i] = arr->arr_b[i + 1];
-		i++; 
+		i++;
 	}
 	arr->size_a++;
 	arr->size_b--;

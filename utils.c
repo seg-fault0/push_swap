@@ -6,7 +6,7 @@
 /*   By: wimam <walidimam69gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 13:54:07 by wimam             #+#    #+#             */
-/*   Updated: 2024/12/30 13:54:08 by wimam            ###   ########.fr       */
+/*   Updated: 2024/12/31 17:45:32 by wimam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_putstr(char *str)
 {
 	if (!str)
 		return ;
-	while(*str)
+	while (*str)
 	{
 		write(1, str, 1);
 		str++;
@@ -47,4 +47,3 @@ int	ft_atoi(char *str)
 	}
 	return (res * sign);
 }
-

@@ -6,7 +6,7 @@
 /*   By: wimam <walidimam69gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 13:54:01 by wimam             #+#    #+#             */
-/*   Updated: 2024/12/30 15:33:40 by wimam            ###   ########.fr       */
+/*   Updated: 2024/12/31 17:44:51 by wimam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	rra(t_ps *arr)
 {
 	unsigned int	i;
-	int	tmp;
+	int				tmp;
 
 	tmp = arr->arr_a[arr->size_a - 1];
 	i = arr->size_a - 1;
@@ -31,7 +31,7 @@ void	rra(t_ps *arr)
 void	rrb(t_ps *arr)
 {
 	unsigned int	i;
-	int	tmp;
+	int				tmp;
 
 	tmp = arr->arr_b[arr->size_b - 1];
 	i = arr->size_b - 1;
@@ -47,7 +47,7 @@ void	rrb(t_ps *arr)
 void	rrr(t_ps *arr)
 {
 	unsigned int	i;
-	int	tmp;
+	int				tmp;
 
 	if (arr->size_a > 1)
 	{

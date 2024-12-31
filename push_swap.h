@@ -6,7 +6,7 @@
 /*   By: wimam <walidimam69gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 13:54:14 by wimam             #+#    #+#             */
-/*   Updated: 2024/12/30 17:51:10 by wimam            ###   ########.fr       */
+/*   Updated: 2024/12/31 17:44:22 by wimam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 
-typedef	struct
+typedef struct s_ps
 {
 	int				*arr_a;
 	int				*arr_b;
@@ -30,6 +30,7 @@ void	ft_get_arr(t_ps *arr, char **buffer);
 void	ft_sort(t_ps *arr);
 t_ps	*ft_init(int size, char **buffer);
 void	ft_exit(t_ps *arr);
+void	swap_arrays(t_ps *arr);
 void	pa(t_ps *arr);
 void	pb(t_ps *arr);
 void	sa(t_ps *arr);
