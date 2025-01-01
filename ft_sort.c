@@ -35,7 +35,44 @@ void	ft_push_to_b(t_ps *arr)
 
 }
 
+void	ft_push_to_a(t_ps *arr)
+{
+	int	maxi;
+	int max_nbr;
+
+	while(arr->size_b > 0)
+	{
+		maxi = ft_get_max_index(arr->arr_b, arr->size_b);
+		max_nbr = arr->arr_b[maxi];
+		if (maxi > arr->size_b)
+		{
+			while (1 == 1)
+			{
+				if (arr->arr_b[0] == max_nbr)
+				{
+					pa(arr);
+					break ;
+				}
+				rb(arr);
+			}
+		}
+		else
+		{
+			while(1 == 1)
+			{
+				if (arr->arr_b[0] == max_nbr)
+				{
+					pa(arr);
+					break ;
+				}
+				rrb(arr);
+			}
+		}
+	}
+}
+
 void	ft_sort(t_ps *arr)
 {
 	ft_push_to_b(arr);
+	ft_push_to_a(arr);
 }
