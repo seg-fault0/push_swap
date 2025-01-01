@@ -44,7 +44,7 @@ void	ft_push_to_a(t_ps *arr)
 	{
 		maxi = ft_get_max_index(arr->arr_b, arr->size_b);
 		max_nbr = arr->arr_b[maxi];
-		if (maxi > arr->size_b)
+		if (maxi > arr->size_b / 2)
 		{
 			while (1 == 1)
 			{
@@ -53,7 +53,7 @@ void	ft_push_to_a(t_ps *arr)
 					pa(arr);
 					break ;
 				}
-				rb(arr);
+				rrb(arr);
 			}
 		}
 		else
@@ -65,7 +65,7 @@ void	ft_push_to_a(t_ps *arr)
 					pa(arr);
 					break ;
 				}
-				rrb(arr);
+				rb(arr);
 			}
 		}
 	}
