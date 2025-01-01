@@ -6,7 +6,7 @@
 /*   By: wimam <walidimam69gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 13:54:14 by wimam             #+#    #+#             */
-/*   Updated: 2025/01/01 13:34:45 by wimam            ###   ########.fr       */
+/*   Updated: 2025/01/01 19:14:09 by wimam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <unistd.h>
 # include <stdlib.h>
+# include <limits.h>
 
 typedef struct s_ps
 {
@@ -34,6 +35,8 @@ void	ft_exit(t_ps *arr);
 //get
 int	ft_get_min_index(int *arr, unsigned int size);
 int	ft_get_max_index(int *arr, unsigned int size);
+int ft_get_limit(t_ps *arr, int max);
+int	find_nth_smallest(int *arr, int size, int n);
 
 //instructions
 void	pa(t_ps *arr);

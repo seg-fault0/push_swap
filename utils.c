@@ -6,7 +6,7 @@
 /*   By: wimam <walidimam69gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 13:54:07 by wimam             #+#    #+#             */
-/*   Updated: 2025/01/01 13:33:46 by wimam            ###   ########.fr       */
+/*   Updated: 2025/01/01 19:22:59 by wimam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,4 +79,75 @@ int	ft_get_max_index(int *arr, unsigned int size)
 		i++;
 	}
 	return (max_index);
+}
+
+int ft_get_limit(t_ps *arr, int max)
+{
+	int i = 0;
+	int j = 0;
+	int check = 0;
+
+	while(i < arr->size_a)
+	{
+		j = 0;
+		check = 0;
+		while(j < arr->size_a)
+		{
+			if (arr->arr_a[i] > arr->arr_a[j])
+				check++;
+			j++;
+		}
+		if(check == max - 1)
+			return (arr->arr_a[i]);
+		i++;
+	}
+	return(arr->arr_a[i]);
+
+}
+
+int find_nth_smallest(int *arr, int size, int n)
+{
+    int smallest;
+    int count;
+    int i;
+    int j;
+    int used[size]; // Array to mark used numbers
+    for (i = 0; i < size; i++) {
+        used[i] = 0; // Initialize the 'used' array to 0
+    }
+
+    if (n <= 0 || n > size)
+        return (0);
+    
+    count = 0;
+    while (count < n)
+    {
+        smallest = INT_MAX;
+        i = 0;
+        while (i < size)
+        {
+            // Skip the numbers that have already been used
+            if (used[i] == 1) {
+                i++;
+                continue;
+            }
+
+            if (arr[i] < smallest) {
+                smallest = arr[i];
+            }
+            i++;
+        }
+
+        // Mark the smallest number as used
+        for (i = 0; i < size; i++) {
+            if (arr[i] == smallest) {
+                used[i] = 1;
+                break;
+            }
+        }
+
+        count++;
+    }
+
+    return smallest; // Return the nth smallest value
 }

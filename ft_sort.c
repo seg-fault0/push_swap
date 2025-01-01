@@ -7,7 +7,7 @@ void	ft_push_to_b(t_ps *arr)
 	int i;
 	int lock;
 
-	limit = 70;
+	limit = ft_get_limit(arr, 70);
 	lock = 0;
 	while(arr->size_a > 0)
 	{
