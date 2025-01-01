@@ -15,18 +15,13 @@ void	ft_push_to_b(t_ps *arr)
 		i = 0;
 		while (i < arr->size_a)
 		{
-			if (arr->arr_a[0] <= limit && lock == 0)
-			{
-				pb(arr);
-				if (limit != first_push)
-					lock = 1;
-			}
-			else if(arr->arr_a[0] <= limit && lock == 1 && limit != first_push)
+			if(arr->arr_a[0] <= limit / 2)
 			{
 				pb(arr);
 				rb(arr);
-				lock = 0;
 			}
+			else if (arr->arr_a[0] <= limit)
+				pb(arr);
 			else
 			{
 				ra(arr);
