@@ -6,7 +6,7 @@
 /*   By: wimam <walidimam69gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 13:54:07 by wimam             #+#    #+#             */
-/*   Updated: 2024/12/31 17:45:32 by wimam            ###   ########.fr       */
+/*   Updated: 2025/01/01 13:33:46 by wimam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,4 +46,37 @@ int	ft_atoi(char *str)
 		i++;
 	}
 	return (res * sign);
+}
+
+int	ft_get_min_index(int *arr, unsigned int size)
+{
+	unsigned int	i;
+	int				min_index;
+
+	min_index = 0;
+	i = 0;
+	while (i < size)
+	{
+		if (arr[i] < arr[min_index])
+			min_index = i;
+		i++;
+	}
+	return (min_index);
+}
+
+
+int	ft_get_max_index(int *arr, unsigned int size)
+{
+	unsigned int	i;
+	int				max_index;
+
+	max_index = 0;
+	i = 0;
+	while (i < size)
+	{
+		if (arr[i] > arr[max_index])
+			max_index = i;
+		i++;
+	}
+	return (max_index);
 }
