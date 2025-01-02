@@ -4,31 +4,29 @@ void	ft_push_to_b(t_ps *arr)
 {
 	int limit;
 	int i;
-	int lock;
-	int	first_push;
+	int average;
 
 	limit = ft_get_limit(arr, 20);
-	first_push = limit;
-	lock = 0;
+	average = (limit - arr->arr_a[ft_get_min_index(arr->arr_a, arr->size_a)]) / 2;
 	while(arr->size_a > 0)
 	{
 		i = 0;
 		while (i < arr->size_a)
 		{
-			if(arr->arr_a[0] <= limit / 2)
+			if(arr->arr_a[0] <= limit)
 			{
 				pb(arr);
-				rb(arr);
+				if(arr->arr_b[0] <= limit - average)
+					rb(arr);
 			}
-			else if (arr->arr_a[0] <= limit)
-				pb(arr);
 			else
 			{
 				ra(arr);
 				i++;
 			}
 		}
-		limit += ft_get_limit(arr, 20);
+		limit = ft_get_limit(arr, 20);
+		average = (limit - arr->arr_a[ft_get_min_index(arr->arr_a, arr->size_a)]) / 2;
 	}
 
 }
