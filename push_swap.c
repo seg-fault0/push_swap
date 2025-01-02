@@ -6,7 +6,7 @@
 /*   By: wimam <walidimam69gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 15:43:22 by wimam             #+#    #+#             */
-/*   Updated: 2024/12/31 17:43:55 by wimam            ###   ########.fr       */
+/*   Updated: 2025/01/02 16:08:15 by wimam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,18 +38,6 @@ t_ps	*ft_init(int size, char **buffer)
 	arr->size_b = 0;
 	ft_get_arr(arr, buffer);
 	return (arr);
-}
-
-void	swap_arrays(t_ps *arr)
-{
-	int	*temp;
-	int	x;
-
-	temp = arr->arr_a;
-	arr->arr_a = arr->arr_b;
-	arr->arr_b = temp;
-	arr->size_a = arr->size_b;
-	arr->arr_b = 0;
 }
 
 void	ft_exit(t_ps *arr)

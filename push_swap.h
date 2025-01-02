@@ -6,7 +6,7 @@
 /*   By: wimam <walidimam69gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 13:54:14 by wimam             #+#    #+#             */
-/*   Updated: 2025/01/01 19:14:09 by wimam            ###   ########.fr       */
+/*   Updated: 2025/01/02 16:09:43 by wimam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,16 +41,9 @@ int	find_nth_smallest(int *arr, int size, int n);
 //instructions
 void	pa(t_ps *arr);
 void	pb(t_ps *arr);
-void	sa(t_ps *arr);
-void	sb(t_ps *arr);
-void	ss(t_ps *arr);
 void	ra(t_ps *arr);
 void	rb(t_ps *arr);
-void	rr(t_ps *arr);
-void	rra(t_ps *arr);
 void	rrb(t_ps *arr);
-void	rrr(t_ps *arr);
-
 //sort
 void	ft_sort(t_ps *arr);
 
