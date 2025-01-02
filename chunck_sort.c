@@ -76,7 +76,7 @@ void	ft_push_to_a(t_ps *arr)
 	}
 }
 
-void	ft_sort(t_ps *arr)
+void	chuck_sort(t_ps *arr)
 {
 	ft_push_to_b(arr);
 	ft_push_to_a(arr);
