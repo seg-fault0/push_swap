@@ -1,32 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   selection_sort.c                                   :+:      :+:    :+:   */
+/*   rotate.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wimam <walidimam69gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/02 16:32:17 by wimam             #+#    #+#             */
-/*   Updated: 2025/01/02 17:11:18 by wimam            ###   ########.fr       */
+/*   Created: 2025/01/02 17:13:08 by wimam             #+#    #+#             */
+/*   Updated: 2025/01/02 17:13:30 by wimam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	selection_sort(t_ps *arr)
+void	rrb(t_ps *arr)
 {
-	int	min_index;
+	unsigned int	i;
+	int				tmp;
 
-	while (arr->size_a > 0)
+	tmp = arr->arr_b[arr->size_b - 1];
+	i = arr->size_b - 1;
+	while (i > 0)
 	{
-		min_index = ft_get_min_index(arr->arr_a, arr->size_a);
-		if (min_index <= (int)(arr->size_a / 2))
-			while (min_index-- > 0)
-				ra(arr);
-		else
-			while (min_index++ < (int)arr->size_a)
-				rra(arr);
-		pb(arr);
+		arr->arr_b[i] = arr->arr_b[i - 1];
+		i--;
 	}
-	while (arr->size_b > 0)
-		pa(arr);
+	arr->arr_b[0] = tmp;
+	ft_putstr("rrb\n");
+}
+
+void	rra(t_ps *arr)
+{
+	unsigned int	i;
+	int				tmp;
+
+	tmp = arr->arr_a[arr->size_a - 1];
+	i = arr->size_a - 1;
+	while (i > 0)
+	{
+		arr->arr_a[i] = arr->arr_a[i - 1];
+		i--;
+	}
+	arr->arr_a[0] = tmp;
+	ft_putstr("rrb\n");
 }

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   chunck_sort.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: wimam <walidimam69gmail.com>               +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/01/02 17:09:51 by wimam             #+#    #+#             */
+/*   Updated: 2025/01/02 17:10:11 by wimam            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 void	ft_push_chunk(t_ps *arr, int limit, int average)
@@ -7,10 +19,10 @@ void	ft_push_chunk(t_ps *arr, int limit, int average)
 	i = 0;
 	while (i < arr->size_a)
 	{
-		if(arr->arr_a[0] <= limit)
+		if (arr->arr_a[0] <= limit)
 		{
 			pb(arr);
-			if(arr->arr_b[0] <= average)
+			if (arr->arr_b[0] <= average)
 				rb(arr);
 		}
 		else
@@ -23,29 +35,28 @@ void	ft_push_chunk(t_ps *arr, int limit, int average)
 
 void	ft_push_to_b(t_ps *arr)
 {
-	int limit;
+	int	limit;
 	int	dif;
-	int average;
+	int	average;
 
 	limit = ft_get_limit(arr, 20);
 	dif = limit - arr->arr_a[ft_get_min_index(arr->arr_a, arr->size_a)];
 	average = limit - (dif / 2);
-	while(arr->size_a > 0)
+	while (arr->size_a > 0)
 	{
 		ft_push_chunk(arr, limit, average);
 		limit = ft_get_limit(arr, 20);
 		dif = limit - arr->arr_a[ft_get_min_index(arr->arr_a, arr->size_a)];
 		average = limit - (dif / 2);
 	}
-
 }
 
 void	ft_push_to_a(t_ps *arr)
 {
 	int	maxi;
-	int max_nbr;
+	int	max_nbr;
 
-	while(arr->size_b > 0)
+	while (arr->size_b > 0)
 	{
 		maxi = ft_get_max_index(arr->arr_b, arr->size_b);
 		max_nbr = arr->arr_b[maxi];
@@ -63,7 +74,7 @@ void	ft_push_to_a(t_ps *arr)
 		}
 		else
 		{
-			while(1 == 1)
+			while (1 == 1)
 			{
 				if (arr->arr_b[0] == max_nbr)
 				{

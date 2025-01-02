@@ -6,7 +6,7 @@
 /*   By: wimam <walidimam69gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 13:54:14 by wimam             #+#    #+#             */
-/*   Updated: 2025/01/02 16:34:19 by wimam            ###   ########.fr       */
+/*   Updated: 2025/01/02 17:11:07 by wimam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,10 @@ t_ps	*ft_init(int size, char **buffer);
 void	ft_exit(t_ps *arr);
 
 //get
-int	ft_get_min_index(int *arr, unsigned int size);
-int	ft_get_max_index(int *arr, unsigned int size);
-int ft_get_limit(t_ps *arr, int max);
-int	find_nth_smallest(int *arr, int size, int n);
+int		ft_get_min_index(int *arr, unsigned int size);
+int		ft_get_max_index(int *arr, unsigned int size);
+int		ft_get_limit(t_ps *arr, int max);
+int		find_nth_smallest(int *arr, int size, int n);
 
 //instructions
 void	pa(t_ps *arr);
@@ -49,6 +49,5 @@ void	rra(t_ps *arr);
 //sort
 void	chuck_sort(t_ps *arr);
 void	selection_sort(t_ps *arr);
-
 
 #endif

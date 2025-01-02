@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   instruction.c                                      :+:      :+:    :+:   */
+/*   push.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wimam <walidimam69gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 13:54:03 by wimam             #+#    #+#             */
-/*   Updated: 2025/01/02 16:34:00 by wimam            ###   ########.fr       */
+/*   Updated: 2025/01/02 17:13:39 by wimam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,6 @@ void	pb(t_ps *arr)
 	ft_putstr("pb\n");
 }
 
-
 void	ra(t_ps *arr)
 {
 	unsigned int	i;
@@ -90,36 +89,4 @@ void	rb(t_ps *arr)
 	}
 	arr->arr_b[arr->size_b - 1] = tmp;
 	ft_putstr("rb\n");
-}
-
-void	rrb(t_ps *arr)
-{
-	unsigned int	i;
-	int				tmp;
-
-	tmp = arr->arr_b[arr->size_b - 1];
-	i = arr->size_b - 1;
-	while (i > 0)
-	{
-		arr->arr_b[i] = arr->arr_b[i - 1];
-		i--;
-	}
-	arr->arr_b[0] = tmp;
-	ft_putstr("rrb\n");
-}
-
-void	rra(t_ps *arr)
-{
-	unsigned int	i;
-	int				tmp;
-
-	tmp = arr->arr_a[arr->size_a - 1];
-	i = arr->size_a - 1;
-	while (i > 0)
-	{
-		arr->arr_a[i] = arr->arr_a[i - 1];
-		i--;
-	}
-	arr->arr_a[0] = tmp;
-	ft_putstr("rrb\n");
 }

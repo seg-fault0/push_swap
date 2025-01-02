@@ -6,7 +6,7 @@
 /*   By: wimam <walidimam69gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 13:54:07 by wimam             #+#    #+#             */
-/*   Updated: 2025/01/02 16:08:57 by wimam            ###   ########.fr       */
+/*   Updated: 2025/01/02 17:12:04 by wimam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,6 @@ int	ft_get_min_index(int *arr, unsigned int size)
 	return (min_index);
 }
 
-
 int	ft_get_max_index(int *arr, unsigned int size)
 {
 	unsigned int	i;
@@ -81,26 +80,27 @@ int	ft_get_max_index(int *arr, unsigned int size)
 	return (max_index);
 }
 
-int ft_get_limit(t_ps *arr, int max)
+int	ft_get_limit(t_ps *arr, int max)
 {
-	int i = 0;
-	int j = 0;
-	int check = 0;
+	int	i;
+	int	j;
+	int	check;
 
-	while(i < arr->size_a)
+	i = 0;
+	check = 0;
+	while (i < arr->size_a)
 	{
 		j = 0;
 		check = 0;
-		while(j < arr->size_a)
+		while (j < arr->size_a)
 		{
 			if (arr->arr_a[i] > arr->arr_a[j])
 				check++;
 			j++;
 		}
-		if(check == max - 1)
+		if (check == max - 1)
 			return (arr->arr_a[i]);
 		i++;
 	}
-	return(arr->arr_a[i]);
-
+	return (arr->arr_a[i]);
 }

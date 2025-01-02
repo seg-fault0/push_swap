@@ -6,7 +6,7 @@
 /*   By: wimam <walidimam69gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 13:53:48 by wimam             #+#    #+#             */
-/*   Updated: 2025/01/02 17:08:20 by wimam            ###   ########.fr       */
+/*   Updated: 2025/01/02 17:09:38 by wimam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,12 +30,11 @@ int	main(int argc, char *argv[])
 	if (!arr)
 	{
 		write(2, "ERROR\n", 7);
-		return(0);
+		return (0);
 	}
 	ft_sort(arr);
 	ft_exit(arr);
 }
-
 
 /*
 
