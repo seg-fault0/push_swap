@@ -6,7 +6,7 @@
 /*   By: wimam <walidimam69gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/02 17:09:51 by wimam             #+#    #+#             */
-/*   Updated: 2025/01/02 17:10:11 by wimam            ###   ########.fr       */
+/*   Updated: 2025/01/06 17:40:12 by wimam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,29 +60,17 @@ void	ft_push_to_a(t_ps *arr)
 	{
 		maxi = ft_get_max_index(arr->arr_b, arr->size_b);
 		max_nbr = arr->arr_b[maxi];
-		if (maxi > arr->size_b / 2)
+		while (1 == 1)
 		{
-			while (1 == 1)
+			if (arr->arr_b[0] == max_nbr)
 			{
-				if (arr->arr_b[0] == max_nbr)
-				{
-					pa(arr);
-					break ;
-				}
+				pa(arr);
+				break ;
+			}
+			if (maxi > arr->size_b / 2)
 				rrb(arr);
-			}
-		}
-		else
-		{
-			while (1 == 1)
-			{
-				if (arr->arr_b[0] == max_nbr)
-				{
-					pa(arr);
-					break ;
-				}
+			else
 				rb(arr);
-			}
 		}
 	}
 }
