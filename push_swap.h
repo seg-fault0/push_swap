@@ -6,7 +6,7 @@
 /*   By: wimam <walidimam69gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 13:54:14 by wimam             #+#    #+#             */
-/*   Updated: 2025/01/02 17:11:07 by wimam            ###   ########.fr       */
+/*   Updated: 2025/01/06 17:59:08 by wimam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void	ft_exit(t_ps *arr);
 //get
 int		ft_get_min_index(int *arr, unsigned int size);
 int		ft_get_max_index(int *arr, unsigned int size);
-int		ft_get_limit(t_ps *arr, int max);
+int		ft_get_limit(int *arr, int size, int max);
 int		find_nth_smallest(int *arr, int size, int n);
 
 //instructions

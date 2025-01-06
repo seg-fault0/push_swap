@@ -6,7 +6,7 @@
 /*   By: wimam <walidimam69gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/02 17:09:51 by wimam             #+#    #+#             */
-/*   Updated: 2025/01/06 17:40:12 by wimam            ###   ########.fr       */
+/*   Updated: 2025/01/06 17:59:41 by wimam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,13 +39,13 @@ void	ft_push_to_b(t_ps *arr)
 	int	dif;
 	int	average;
 
-	limit = ft_get_limit(arr, 20);
+	limit = ft_get_limit(arr->arr_a, arr->size_a, 20);
 	dif = limit - arr->arr_a[ft_get_min_index(arr->arr_a, arr->size_a)];
 	average = limit - (dif / 2);
 	while (arr->size_a > 0)
 	{
 		ft_push_chunk(arr, limit, average);
-		limit = ft_get_limit(arr, 20);
+		limit = ft_get_limit(arr->arr_a, arr->size_a, 20);
 		dif = limit - arr->arr_a[ft_get_min_index(arr->arr_a, arr->size_a)];
 		average = limit - (dif / 2);
 	}
