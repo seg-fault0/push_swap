@@ -24,3 +24,8 @@ clean:
 
 fclean : clean
 	rm -f $(NAME)
+
+bonus:
+	cc bonus/*.c -I . -o checker
+
+.PHONY : bonus
