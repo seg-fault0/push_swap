@@ -6,7 +6,7 @@
 /*   By: wimam <walidimam69gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/02 17:09:51 by wimam             #+#    #+#             */
-/*   Updated: 2025/01/07 13:21:58 by wimam            ###   ########.fr       */
+/*   Updated: 2025/01/07 13:44:07 by wimam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_push_chunk(t_ps *arr, int limit, int average)
 {
-	size_t	i;
+	int	i;
 
 	i = 0;
 	while (i < arr->size_a)
@@ -53,8 +53,8 @@ void	ft_push_to_b(t_ps *arr)
 
 void	ft_push_to_a(t_ps *arr)
 {
-	size_t	maxi;
-	int		max_nbr;
+	int	maxi;
+	int	max_nbr;
 
 	while (arr->size_b > 0)
 	{
