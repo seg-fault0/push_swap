@@ -6,7 +6,7 @@
 /*   By: wimam <walidimam69gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 13:54:14 by wimam             #+#    #+#             */
-/*   Updated: 2025/01/06 17:59:08 by wimam            ###   ########.fr       */
+/*   Updated: 2025/01/07 13:20:28 by wimam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@
 
 typedef struct s_ps
 {
-	int				*arr_a;
-	int				*arr_b;
-	unsigned int	size_a;
-	unsigned int	size_b;
+	int		*arr_a;
+	int		*arr_b;
+	size_t	size_a;
+	size_t	size_b;
 }t_ps;
 
 //utiles
