@@ -6,7 +6,7 @@
 /*   By: wimam <walidimam69gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 13:54:14 by wimam             #+#    #+#             */
-/*   Updated: 2025/01/08 11:08:30 by wimam            ###   ########.fr       */
+/*   Updated: 2025/01/08 11:28:38 by wimam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,24 +19,24 @@
 
 typedef struct s_ps
 {
-	int				*arr_a;
-	int				*arr_b;
-	unsigned int	size_a;
-	unsigned int	size_b;
+	int		*arr_a;
+	int		*arr_b;
+	size_t	size_a;
+	size_t	size_b;
 }t_ps;
 
 //utiles
 void	ft_putstr(char *str);
 int		ft_atoi(char *str);
 void	ft_get_arr(t_ps *arr, char **buffer);
-t_ps	*ft_init(int size, char **buffer);
+t_ps	*ft_init(size_t size, char **buffer);
 void	ft_error(unsigned int msg);
 void	ft_exit(t_ps *arr);
 
 //get
-int		ft_get_min_index(int *arr, unsigned int size);
-int		ft_get_max_index(int *arr, unsigned int size);
-int		ft_get_limit(int *arr, int size, int max);
+size_t	ft_get_min_index(int *arr, size_t size);
+size_t	ft_get_max_index(int *arr, size_t size);
+int		ft_get_limit(int *arr, size_t size, int max);
 int		find_nth_smallest(int *arr, int size, int n);
 
 //instructions

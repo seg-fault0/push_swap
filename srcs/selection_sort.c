@@ -6,7 +6,7 @@
 /*   By: wimam <walidimam69gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/02 16:32:17 by wimam             #+#    #+#             */
-/*   Updated: 2025/01/02 17:11:18 by wimam            ###   ########.fr       */
+/*   Updated: 2025/01/08 11:27:39 by wimam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,16 @@
 
 void	selection_sort(t_ps *arr)
 {
-	int	min_index;
+	size_t	min_index;
 
 	while (arr->size_a > 0)
 	{
 		min_index = ft_get_min_index(arr->arr_a, arr->size_a);
-		if (min_index <= (int)(arr->size_a / 2))
+		if (min_index <= (arr->size_a / 2))
 			while (min_index-- > 0)
 				ra(arr);
 		else
-			while (min_index++ < (int)arr->size_a)
+			while (min_index++ < arr->size_a)
 				rra(arr);
 		pb(arr);
 	}

@@ -6,7 +6,7 @@
 /*   By: wimam <walidimam69gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/02 17:13:08 by wimam             #+#    #+#             */
-/*   Updated: 2025/01/03 08:37:24 by wimam            ###   ########.fr       */
+/*   Updated: 2025/01/08 11:21:41 by wimam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	rrb(t_ps *arr)
 {
-	unsigned int	i;
-	int				tmp;
+	size_t	i;
+	int		tmp;
 
 	tmp = arr->arr_b[arr->size_b - 1];
 	i = arr->size_b - 1;
@@ -30,8 +30,8 @@ void	rrb(t_ps *arr)
 
 void	rra(t_ps *arr)
 {
-	unsigned int	i;
-	int				tmp;
+	size_t	i;
+	int		tmp;
 
 	tmp = arr->arr_a[arr->size_a - 1];
 	i = arr->size_a - 1;

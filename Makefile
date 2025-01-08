@@ -18,7 +18,7 @@ $(NAME) : $(OBG)
 	cc $(OBG) -o $@
 
 %.o : %.c
-	cc -c $(I) $^ -o $@
+	cc -c $(FLAGS) $(I) $^ -o $@
 
 clean:
 	rm -f $(OBG)

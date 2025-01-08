@@ -6,7 +6,7 @@
 /*   By: wimam <walidimam69gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 15:43:22 by wimam             #+#    #+#             */
-/*   Updated: 2025/01/08 11:11:01 by wimam            ###   ########.fr       */
+/*   Updated: 2025/01/08 11:27:11 by wimam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,20 @@
 
 void	ft_get_arr(t_ps *arr, char **buffer)
 {
-	int	i;
+	size_t	i;
 
-	i = -1;
-	while (++i < arr->size_a)
+	i = 0;
+	while (i < arr->size_a)
+	{
 		arr->arr_a[i] = ft_atoi(buffer[i + 1]);
+		i++;
+	}
 }
 
-int	check_dup(int *arr, int size)
+int	check_dup(int *arr, size_t size)
 {
-	int	i;
-	int	j;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
 	while (i < size)
@@ -41,7 +44,7 @@ int	check_dup(int *arr, int size)
 	return (0);
 }
 
-t_ps	*ft_init(int size, char **buffer)
+t_ps	*ft_init(size_t size, char **buffer)
 {
 	t_ps	*arr;
 
