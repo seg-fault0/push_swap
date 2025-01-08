@@ -6,7 +6,7 @@
 /*   By: wimam <walidimam69gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 13:54:07 by wimam             #+#    #+#             */
-/*   Updated: 2025/01/08 14:54:15 by wimam            ###   ########.fr       */
+/*   Updated: 2025/01/08 19:27:11 by wimam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,20 +68,6 @@ int	check_dup(int *arr, size_t size)
 	return (0);
 }
 
-int is_num(char c)
-{
-	if (c >= '0' && c <= '9')
-		return(1);
-	return (0); 	
-}
-
-int is_sign(char c)
-{
-	if (c == '-' || c == '+')
-		return (1);
-	return (0);
-}
-
 int	ft_is_sorted(int *arr, int size)
 {
 	int	i;
@@ -106,7 +92,7 @@ int	ft_strcmp(char *s1, char *s2)
 	while (s1[i] != '\0' && s2[i] != '\0')
 	{
 		if (s1[i] != s2[i])
-			return(0);
+			return (0);
 		++i;
 	}
 	return (1);

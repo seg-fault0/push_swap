@@ -6,7 +6,7 @@
 /*   By: wimam <walidimam69gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 11:38:36 by wimam             #+#    #+#             */
-/*   Updated: 2025/01/08 13:14:53 by wimam            ###   ########.fr       */
+/*   Updated: 2025/01/08 19:25:38 by wimam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ int	ft_get_limit(int *arr, size_t size, int max)
 {
 	size_t	i;
 	size_t	j;
-	int	check;
+	int		check;
 
 	i = 0;
 	check = 0;

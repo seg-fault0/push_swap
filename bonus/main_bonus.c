@@ -6,7 +6,7 @@
 /*   By: wimam <walidimam69gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 14:06:00 by wimam             #+#    #+#             */
-/*   Updated: 2025/01/08 16:06:32 by wimam            ###   ########.fr       */
+/*   Updated: 2025/01/08 19:29:25 by wimam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,11 +31,11 @@ int	ft_event(t_ps *arr, char *str)
 	return (0);
 }
 
-int main(int argc, char *argv[])
+int	main(int argc, char *argv[])
 {
 	t_ps	*arr;
 	char	*instruction;
-	
+
 	arr = ft_init(argc - 1, argv + 1);
 	instruction = get_next_line(0);
 	while (instruction)

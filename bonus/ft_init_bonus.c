@@ -6,7 +6,7 @@
 /*   By: wimam <walidimam69gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 15:43:22 by wimam             #+#    #+#             */
-/*   Updated: 2025/01/08 19:20:08 by wimam            ###   ########.fr       */
+/*   Updated: 2025/01/08 19:26:09 by wimam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,18 +16,18 @@ size_t	ft_get_arr_size(size_t count, char **buffer)
 {
 	size_t	i;
 	size_t	j;
-	size_t size;
+	size_t	size;
 
 	size = 0;
 	i = 0;
-	while(i < count)
+	while (i < count)
 	{
 		j = 0;
 		while (buffer[i][j])
 		{
 			while (buffer[i][j] == ' ')
 				j++;
-			if(is_sign(buffer[i][j]))
+			if (is_sign(buffer[i][j]))
 				j++;
 			if (!is_num(buffer[i][j]))
 				return (ft_error(3), 0);
@@ -45,12 +45,12 @@ void	ft_get_arr(t_ps *arr, size_t count, char **buffer)
 	size_t	i;
 	size_t	j;
 	size_t	a;
-	size_t size;
+	size_t	size;
 
 	size = 0;
 	i = 0;
 	a = 0;
-	while(i < count)
+	while (i < count)
 	{
 		j = 0;
 		while (buffer[i][j])
@@ -78,10 +78,10 @@ t_ps	*ft_init(size_t argc, char **argv)
 		return (free(arr), NULL);
 	arr->arr_a = malloc(arr->size_a * sizeof(int));
 	if (!arr->arr_a)
-		return(free(arr), NULL);
+		return (free(arr), NULL);
 	ft_get_arr(arr, argc, argv);
 	if (check_dup(arr->arr_a, arr->size_a))
-		return(free(arr->arr_a), free(arr), NULL);
+		return (free(arr->arr_a), free(arr), NULL);
 	arr->arr_b = malloc(arr->size_a * sizeof(int));
 	if (!arr->arr_b)
 		return (free(arr->arr_a), free(arr), NULL);

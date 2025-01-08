@@ -16,6 +16,7 @@ BSRCS =	bonus/ft_exit_bonus.c		\
 		bonus/rotate.c	 			\
 		bonus/main_bonus.c			\
 		bonus/utils_bonus.c			\
+		bonus/utils2_bonus.c		\
 
 OBG = $(SRCS:.c=.o)
 BOBG = $(BSRCS:.c=.o)

@@ -6,7 +6,7 @@
 /*   By: wimam <walidimam69gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 13:53:48 by wimam             #+#    #+#             */
-/*   Updated: 2025/01/08 16:20:23 by wimam            ###   ########.fr       */
+/*   Updated: 2025/01/08 19:24:22 by wimam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ void	ft_sort(t_ps *arr)
 		chuck_sort(arr);
 }
 
-#include <stdio.h>
 int	main(int argc, char *argv[])
 {
 	t_ps	*arr;
