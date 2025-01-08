@@ -1,29 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_exit.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wimam <walidimam69gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/07 14:06:00 by wimam             #+#    #+#             */
-/*   Updated: 2025/01/08 10:51:50 by wimam            ###   ########.fr       */
+/*   Created: 2025/01/08 11:02:39 by wimam             #+#    #+#             */
+/*   Updated: 2025/01/08 13:40:22 by wimam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker.h"
 
-#include <stdio.h>
-int main()
-{
-	char *instruction;
 
-	instruction = get_next_line(0);
-	while(instruction != NULL)
-	{
-		printf("**%s", instruction);
-		free(instruction);
-		instruction = get_next_line(0);
-		if(instruction[0] == 10)
-			return(free(instruction), 0);
-	}
+void	ft_exit(t_ps *arr)
+{
+	free(arr->arr_a);
+	free(arr->arr_b);
+	free(arr);
+}
+
+void	ft_error(unsigned int msg)
+{
+	if (msg == 1)
+		write(2, "ERROR : doubled number\n", 23);
+	else if (msg == 2)
+		write(2, "ERROR : not enough arguments\n", 29);
+	else if (msg == 3)
+		write(2, "EROOR : some arguments aren't integers\n", 39);
 }

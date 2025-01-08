@@ -6,7 +6,7 @@
 /*   By: wimam <walidimam69gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/23 05:04:55 by wimam             #+#    #+#             */
-/*   Updated: 2025/01/08 10:02:17 by wimam            ###   ########.fr       */
+/*   Updated: 2025/01/08 13:42:16 by wimam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ static char	*ft_read(int fd)
 		return (NULL);
 	tmp[BUFFER_SIZE] = '\0';
 	read_byte = 0;
-	buffer = ft_init(NULL);
+	buffer = ft_init_buffer(NULL);
 	read_byte = read(fd, tmp, BUFFER_SIZE);
 	while (read_byte > 0)
 	{
@@ -48,7 +48,7 @@ static char	*ft_get_data(int fd, char *old)
 	if (ft_new_line_check(old))
 		return (old);
 	if (!old)
-		old = ft_init(NULL);
+		old = ft_init_buffer(NULL);
 	buffer = ft_read(fd);
 	data = ft_strljoin(old, buffer, ft_strlen(buffer));
 	free(buffer);

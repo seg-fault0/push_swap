@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wimam <walidimam69@gmail.com>              +#+  +:+       +#+        */
+/*   By: wimam <walidimam69gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/23 05:03:16 by wimam             #+#    #+#             */
-/*   Updated: 2024/12/01 04:57:34 by wimam            ###   ########.fr       */
+/*   Updated: 2025/01/08 13:41:51 by wimam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
 int		ft_strlen(char *str);
 char	*ft_strljoin(char *s1, char *s2, int size);
 int		ft_new_line_check(char *str);
-char	*ft_init(char *str);
+char	*ft_init_buffer(char *str);
 char	*ft_strdup(char *s);
 char	*get_next_line(int fd);
 

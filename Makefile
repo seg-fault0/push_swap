@@ -8,26 +8,43 @@ SRCS =	srcs/arr_utils.c		\
 		srcs/selection_sort.c	\
 		srcs/utils.c			\
 
+BSRCS =	bonus/ft_exit_bonus.c		\
+		bonus/ft_init_bonus.c		\
+		bonus/get_next_line_utils.c	\
+		bonus/get_next_line.c		\
+		bonus/main_bonus.c			\
+		bonus/utils_bonus.c			\
+
 OBG = $(SRCS:.c=.o)
+BOBG = $(BSRCS:.c=.o)
+
 NAME = push_swap
+BNAME = checker
+
 FLAGS = -Wall -Wextra -Werror
 I = -I ./includes/
 
 all : $(NAME)
+bonus : $(BNAME)
 
 $(NAME) : $(OBG)
 	cc $(OBG) -o $@
+$(BNAME) : $(BOBG)
+	cc $(BOBG) -o $@
 
-%.o : %.c
+$(OBG) : %.o : %.c
+	cc -c $(FLAGS) $(I) $^ -o $@
+$(BOBG) : %.o : %.c
 	cc -c $(FLAGS) $(I) $^ -o $@
 
 clean:
 	rm -f $(OBG)
+bclean:
+	rm -f $(BOBG)
 
 fclean : clean
 	rm -f $(NAME)
+bfclean : bclean
+	rm -r $(BNAME)
 
-bonus:
-	cc bonus/*.c -I . -o checker
-
-.PHONY : bonus
+.PHONY : clean bclean

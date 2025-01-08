@@ -1,16 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   arr.c                                              :+:      :+:    :+:   */
+/*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wimam <walidimam69gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/07 14:09:13 by wimam             #+#    #+#             */
-/*   Updated: 2025/01/07 14:13:23 by wimam            ###   ########.fr       */
+/*   Created: 2024/12/30 13:54:07 by wimam             #+#    #+#             */
+/*   Updated: 2025/01/08 13:40:48 by wimam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker.h"
+
+void	ft_putstr(char *str)
+{
+	if (!str)
+		return ;
+	while (*str)
+	{
+		write(1, str, 1);
+		str++;
+	}
+}
 
 int	ft_atoi(char *str)
 {
@@ -37,19 +48,10 @@ int	ft_atoi(char *str)
 	return (res * sign);
 }
 
-void	ft_get_arr(t_ps *arr, char **buffer)
+int	check_dup(int *arr, size_t size)
 {
-	int	i;
-
-	i = -1;
-	while (++i < arr->size_a)
-		arr->arr_a[i] = ft_atoi(buffer[i + 1]);
-}
-
-int	check_dup(int *arr, int size)
-{
-	int	i;
-	int	j;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
 	while (i < size)
@@ -58,7 +60,7 @@ int	check_dup(int *arr, int size)
 		while (j < size)
 		{
 			if (arr[i] == arr[j])
-				return (1);
+				return (ft_error(1), 1);
 			j++;
 		}
 		i++;
@@ -66,23 +68,16 @@ int	check_dup(int *arr, int size)
 	return (0);
 }
 
-t_ps	*ft_arr_init(int size, char **buffer)
+int is_num(char c)
 {
-	t_ps	*arr;
+	if (c >= '0' && c <= '9')
+		return(1);
+	return (0); 	
+}
 
-	arr = malloc(sizeof(t_ps));
-	if (!arr)
-		return (NULL);
-	arr->arr_a = malloc(size * sizeof(int));
-	if (!arr->arr_a)
-		return (free(arr), NULL);
-	arr->size_a = size - 1;
-	ft_get_arr(arr, buffer);
-	if (check_dup(arr->arr_a, arr->size_a))
-		return (free(arr->arr_a), free(arr), NULL);
-	arr->arr_b = malloc(size * sizeof(int));
-	if (!arr->arr_b)
-		return (free(arr->arr_a), free(arr), NULL);
-	arr->size_b = 0;
-	return (arr);
+int is_sign(char c)
+{
+	if (c == '-' || c == '+')
+		return (1);
+	return (0);
 }
