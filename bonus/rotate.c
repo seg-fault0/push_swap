@@ -6,7 +6,7 @@
 /*   By: wimam <walidimam69gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/02 17:13:08 by wimam             #+#    #+#             */
-/*   Updated: 2025/01/08 11:21:41 by wimam            ###   ########.fr       */
+/*   Updated: 2025/01/08 15:52:37 by wimam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ void	rrb(t_ps *arr)
 		i--;
 	}
 	arr->arr_b[0] = tmp;
-	ft_putstr("rrb\n");
 }
 
 void	rra(t_ps *arr)
@@ -41,5 +40,4 @@ void	rra(t_ps *arr)
 		i--;
 	}
 	arr->arr_a[0] = tmp;
-	ft_putstr("rra\n");
 }

@@ -6,7 +6,7 @@
 /*   By: wimam <walidimam69gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 14:06:00 by wimam             #+#    #+#             */
-/*   Updated: 2025/01/08 15:48:34 by wimam            ###   ########.fr       */
+/*   Updated: 2025/01/08 16:06:32 by wimam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ int	ft_event(t_ps *arr, char *str)
 	return (0);
 }
 
-#include <stdio.h>
 int main(int argc, char *argv[])
 {
 	t_ps	*arr;
@@ -41,8 +40,6 @@ int main(int argc, char *argv[])
 	instruction = get_next_line(0);
 	while (instruction)
 	{
-		if (*instruction == '\n')
-			break ;
 		ft_event(arr, instruction);
 		free(instruction);
 		instruction = get_next_line(0);
@@ -54,20 +51,3 @@ int main(int argc, char *argv[])
 		ft_putstr("KO\n");
 	return (ft_exit(arr), 0);
 }
-	
-/*
-	4 3 2 1
-
-rra
-pb
-rra
-pb
-ra
-pb
-pb
-pa
-pa
-pa
-pa
-
-*/
