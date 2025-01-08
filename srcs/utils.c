@@ -6,7 +6,7 @@
 /*   By: wimam <walidimam69gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 13:54:07 by wimam             #+#    #+#             */
-/*   Updated: 2025/01/08 11:28:05 by wimam            ###   ########.fr       */
+/*   Updated: 2025/01/08 12:39:02 by wimam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,59 +48,16 @@ int	ft_atoi(char *str)
 	return (res * sign);
 }
 
-size_t	ft_get_min_index(int *arr, size_t size)
+int is_num(char c)
 {
-	size_t	i;
-	size_t	min_index;
-
-	min_index = 0;
-	i = 0;
-	while (i < size)
-	{
-		if (arr[i] < arr[min_index])
-			min_index = i;
-		i++;
-	}
-	return (min_index);
+	if (c >= '0' && c <= '9')
+		return(1);
+	return (0); 	
 }
 
-size_t	ft_get_max_index(int *arr, size_t size)
+int is_sign(char c)
 {
-	size_t	i;
-	size_t	max_index;
-
-	max_index = 0;
-	i = 0;
-	while (i < size)
-	{
-		if (arr[i] > arr[max_index])
-			max_index = i;
-		i++;
-	}
-	return (max_index);
-}
-
-int	ft_get_limit(int *arr, size_t size, int max)
-{
-	size_t	i;
-	size_t	j;
-	int	check;
-
-	i = 0;
-	check = 0;
-	while (i < size)
-	{
-		j = 0;
-		check = 0;
-		while (j < size)
-		{
-			if (arr[i] > arr[j])
-				check++;
-			j++;
-		}
-		if (check == max - 1)
-			return (arr[i]);
-		i++;
-	}
-	return (arr[i]);
+	if (c == '-' || c == '+')
+		return (1);
+	return (0);
 }

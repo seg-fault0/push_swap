@@ -6,7 +6,7 @@
 /*   By: wimam <walidimam69gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 13:53:48 by wimam             #+#    #+#             */
-/*   Updated: 2025/01/08 11:07:40 by wimam            ###   ########.fr       */
+/*   Updated: 2025/01/08 11:45:42 by wimam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ int	main(int argc, char *argv[])
 	t_ps	*arr;
 
 	if (argc == 1)
-		write(2, "ERROR\n", 7);
-	arr = ft_init(argc, argv);
+		return (ft_error(2), 1);
+	arr = ft_init(argc - 1, argv + 1);
 	if (!arr)
 		return (1);
 	ft_sort(arr);

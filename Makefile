@@ -1,7 +1,8 @@
-SRCS =	srcs/chunck_sort.c 		\
+SRCS =	srcs/arr_utils.c		\
+		srcs/chunck_sort.c 		\
 		srcs/ft_exit.c			\
+		srcs/ft_init.c			\
 		srcs/main.c 			\
-		srcs/push_swap.c 		\
 		srcs/push.c 			\
 		srcs/rotate.c 			\
 		srcs/selection_sort.c	\

@@ -1,27 +1,72 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   arr_utils.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wimam <walidimam69gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/30 15:43:22 by wimam             #+#    #+#             */
-/*   Updated: 2025/01/08 11:27:11 by wimam            ###   ########.fr       */
+/*   Created: 2025/01/08 11:38:36 by wimam             #+#    #+#             */
+/*   Updated: 2025/01/08 11:55:41 by wimam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ft_get_arr(t_ps *arr, char **buffer)
+size_t	ft_get_min_index(int *arr, size_t size)
 {
 	size_t	i;
+	size_t	min_index;
 
+	min_index = 0;
 	i = 0;
-	while (i < arr->size_a)
+	while (i < size)
 	{
-		arr->arr_a[i] = ft_atoi(buffer[i + 1]);
+		if (arr[i] < arr[min_index])
+			min_index = i;
 		i++;
 	}
+	return (min_index);
+}
+
+size_t	ft_get_max_index(int *arr, size_t size)
+{
+	size_t	i;
+	size_t	max_index;
+
+	max_index = 0;
+	i = 0;
+	while (i < size)
+	{
+		if (arr[i] > arr[max_index])
+			max_index = i;
+		i++;
+	}
+	return (max_index);
+}
+
+int	ft_get_limit(int *arr, size_t size, int max)
+{
+	size_t	i;
+	size_t	j;
+	int	check;
+
+	i = 0;
+	check = 0;
+	while (i < size)
+	{
+		j = 0;
+		check = 0;
+		while (j < size)
+		{
+			if (arr[i] > arr[j])
+				check++;
+			j++;
+		}
+		if (check == max - 1)
+			return (arr[i]);
+		i++;
+	}
+	return (arr[i]);
 }
 
 int	check_dup(int *arr, size_t size)
@@ -42,25 +87,4 @@ int	check_dup(int *arr, size_t size)
 		i++;
 	}
 	return (0);
-}
-
-t_ps	*ft_init(size_t size, char **buffer)
-{
-	t_ps	*arr;
-
-	arr = malloc(sizeof(t_ps));
-	if (!arr)
-		return (NULL);
-	arr->arr_a = malloc(size * sizeof(int));
-	if (!arr->arr_a)
-		return (free(arr), NULL);
-	arr->size_a = size - 1;
-	ft_get_arr(arr, buffer);
-	if (check_dup(arr->arr_a, arr->size_a))
-		return (free(arr->arr_a), free(arr), NULL);
-	arr->arr_b = malloc(size * sizeof(int));
-	if (!arr->arr_b)
-		return (free(arr->arr_a), free(arr), NULL);
-	arr->size_b = 0;
-	return (arr);
 }

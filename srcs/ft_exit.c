@@ -6,7 +6,7 @@
 /*   By: wimam <walidimam69gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 11:02:39 by wimam             #+#    #+#             */
-/*   Updated: 2025/01/08 11:04:05 by wimam            ###   ########.fr       */
+/*   Updated: 2025/01/08 11:34:26 by wimam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,4 +24,6 @@ void	ft_error(unsigned int msg)
 {
 	if (msg == 1)
 		write(2, "ERROR : doubled number\n", 23);
+	else if (msg == 2)
+		write(2, "ERROR : not enough arguments\n", 29);
 }
