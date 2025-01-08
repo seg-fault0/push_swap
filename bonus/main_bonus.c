@@ -6,7 +6,7 @@
 /*   By: wimam <walidimam@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 14:06:00 by wimam             #+#    #+#             */
-/*   Updated: 2025/01/08 21:54:50 by wimam            ###   ########.fr       */
+/*   Updated: 2025/01/08 21:58:32 by wimam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,6 @@ int	main(int argc, char *argv[])
 
 	arr = ft_init(argc - 1, argv + 1);
 	instruction = get_next_line(0);
-	if (!instruction)
-		return (ft_exit(arr), 1);
 	while (instruction)
 	{
 		ft_event(arr, instruction);
