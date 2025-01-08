@@ -6,7 +6,7 @@
 /*   By: wimam <walidimam69gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 13:54:14 by wimam             #+#    #+#             */
-/*   Updated: 2025/01/07 13:44:57 by wimam            ###   ########.fr       */
+/*   Updated: 2025/01/08 11:08:30 by wimam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ void	ft_putstr(char *str);
 int		ft_atoi(char *str);
 void	ft_get_arr(t_ps *arr, char **buffer);
 t_ps	*ft_init(int size, char **buffer);
+void	ft_error(unsigned int msg);
 void	ft_exit(t_ps *arr);
 
 //get

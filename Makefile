@@ -1,4 +1,5 @@
 SRCS =	srcs/chunck_sort.c 		\
+		srcs/ft_exit.c			\
 		srcs/main.c 			\
 		srcs/push_swap.c 		\
 		srcs/push.c 			\
@@ -9,7 +10,7 @@ SRCS =	srcs/chunck_sort.c 		\
 OBG = $(SRCS:.c=.o)
 NAME = push_swap
 FLAGS = -Wall -Wextra -Werror
-I = -I .
+I = -I ./includes/
 
 all : $(NAME)
 

@@ -6,7 +6,7 @@
 /*   By: wimam <walidimam69gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 13:53:48 by wimam             #+#    #+#             */
-/*   Updated: 2025/01/02 17:09:38 by wimam            ###   ########.fr       */
+/*   Updated: 2025/01/08 11:07:40 by wimam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,35 +28,7 @@ int	main(int argc, char *argv[])
 		write(2, "ERROR\n", 7);
 	arr = ft_init(argc, argv);
 	if (!arr)
-	{
-		write(2, "ERROR\n", 7);
-		return (0);
-	}
+		return (1);
 	ft_sort(arr);
 	ft_exit(arr);
 }
-
-/*
-
-#include <stdio.h>
-int	main(int argc, char *argv[])
-{
-	t_ps	*arr;
-
-	if (argc == 1)
-		write(2, "ERROR\n", 7);
-	arr = ft_init(argc, argv);
-	if (!arr)
-	{
-		write(2, "ERROR\n", 7);
-		return(0);
-	}
-	ft_sort(arr);
-	
-	for(int i = 0; i < arr->size_a; i++)
-		printf("%d ", arr->arr_a[i]);
-
-	ft_exit(arr);
-}
-
-*/

@@ -6,7 +6,7 @@
 /*   By: wimam <walidimam69gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 15:43:22 by wimam             #+#    #+#             */
-/*   Updated: 2025/01/07 13:44:25 by wimam            ###   ########.fr       */
+/*   Updated: 2025/01/08 11:11:01 by wimam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int	check_dup(int *arr, int size)
 		while (j < size)
 		{
 			if (arr[i] == arr[j])
-				return (1);
+				return (ft_error(1), 1);
 			j++;
 		}
 		i++;
@@ -60,11 +60,4 @@ t_ps	*ft_init(int size, char **buffer)
 		return (free(arr->arr_a), free(arr), NULL);
 	arr->size_b = 0;
 	return (arr);
-}
-
-void	ft_exit(t_ps *arr)
-{
-	free(arr->arr_a);
-	free(arr->arr_b);
-	free(arr);
 }
