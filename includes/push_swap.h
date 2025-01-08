@@ -6,7 +6,7 @@
 /*   By: wimam <walidimam69gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 13:54:14 by wimam             #+#    #+#             */
-/*   Updated: 2025/01/08 12:46:15 by wimam            ###   ########.fr       */
+/*   Updated: 2025/01/08 16:35:07 by wimam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ typedef struct s_ps
 
 //utiles
 void	ft_putstr(char *str);
-int		ft_atoi(char *str);
+long	ft_atoi(char *str);
 t_ps	*ft_init(size_t argc, char **argv);
 int		check_dup(int *arr, size_t size);
 int		is_num(char c);

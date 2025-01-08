@@ -6,7 +6,7 @@
 /*   By: wimam <walidimam69gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 13:54:07 by wimam             #+#    #+#             */
-/*   Updated: 2025/01/08 12:39:02 by wimam            ###   ########.fr       */
+/*   Updated: 2025/01/08 16:34:49 by wimam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,11 @@ void	ft_putstr(char *str)
 	}
 }
 
-int	ft_atoi(char *str)
+long	ft_atoi(char *str)
 {
-	int	i;
-	int	res;
-	int	sign;
+	int		i;
+	long	res;
+	int		sign;
 
 	res = 0;
 	i = 0;
