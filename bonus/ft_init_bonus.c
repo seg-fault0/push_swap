@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_init.c                                          :+:      :+:    :+:   */
+/*   ft_init_bonus.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wimam <walidimam69gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 15:43:22 by wimam             #+#    #+#             */
-/*   Updated: 2025/01/08 14:08:08 by wimam            ###   ########.fr       */
+/*   Updated: 2025/01/08 19:20:08 by wimam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,7 @@ t_ps	*ft_init(size_t argc, char **argv)
 		return (NULL);
 	arr->size_a = ft_get_arr_size(argc, argv);
 	if (arr->size_a == 0)
-		return (NULL);
+		return (free(arr), NULL);
 	arr->arr_a = malloc(arr->size_a * sizeof(int));
 	if (!arr->arr_a)
 		return(free(arr), NULL);
