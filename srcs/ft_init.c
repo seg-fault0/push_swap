@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_init.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wimam <walidimam69gmail.com>               +#+  +:+       +#+        */
+/*   By: wimam <walidimam@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 15:43:22 by wimam             #+#    #+#             */
-/*   Updated: 2025/01/08 19:23:51 by wimam            ###   ########.fr       */
+/*   Updated: 2025/01/08 21:17:12 by wimam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,10 +45,8 @@ int	ft_get_arr(t_ps *arr, size_t count, char **buffer)
 	size_t			i;
 	size_t			j;
 	size_t			a;
-	size_t			size;
 	long			tmp;
 
-	size = 0;
 	i = 0;
 	a = 0;
 	while (i < count)
@@ -85,6 +83,8 @@ t_ps	*ft_init(size_t argc, char **argv)
 	if (!arr->arr_a)
 		return (free(arr), NULL);
 	if (ft_get_arr(arr, argc, argv))
+		return (free(arr->arr_a), free(arr), NULL);
+	if (ft_is_sorted(arr->arr_a, arr->size_a))
 		return (free(arr->arr_a), free(arr), NULL);
 	if (check_dup(arr->arr_a, arr->size_a))
 		return (free(arr->arr_a), free(arr), NULL);

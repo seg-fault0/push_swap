@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wimam <walidimam69gmail.com>               +#+  +:+       +#+        */
+/*   By: wimam <walidimam@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 13:54:07 by wimam             #+#    #+#             */
-/*   Updated: 2025/01/08 19:24:12 by wimam            ###   ########.fr       */
+/*   Updated: 2025/01/08 21:14:56 by wimam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,4 +60,20 @@ int	is_sign(char c)
 	if (c == '-' || c == '+')
 		return (1);
 	return (0);
+}
+
+int	ft_is_sorted(int *arr, int size)
+{
+	int	i;
+
+	if (size <= 1)
+		return (1);
+	i = 0;
+	while (i < size - 1)
+	{
+		if (arr[i] > arr[i + 1])
+			return (0);
+		i++;
+	}
+	return (1);
 }

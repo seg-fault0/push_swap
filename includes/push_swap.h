@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wimam <walidimam69gmail.com>               +#+  +:+       +#+        */
+/*   By: wimam <walidimam@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 13:54:14 by wimam             #+#    #+#             */
-/*   Updated: 2025/01/08 19:29:38 by wimam            ###   ########.fr       */
+/*   Updated: 2025/01/08 21:15:10 by wimam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ t_ps	*ft_init(size_t argc, char **argv);
 int		check_dup(int *arr, size_t size);
 int		is_num(char c);
 int		is_sign(char c);
+int		ft_is_sorted(int *arr, int size);
 
 //get
 size_t	ft_get_min_index(int *arr, size_t size);

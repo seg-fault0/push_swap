@@ -45,9 +45,7 @@ void	ft_get_arr(t_ps *arr, size_t count, char **buffer)
 	size_t	i;
 	size_t	j;
 	size_t	a;
-	size_t	size;
 
-	size = 0;
 	i = 0;
 	a = 0;
 	while (i < count)
