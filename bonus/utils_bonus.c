@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.c                                            :+:      :+:    :+:   */
+/*   utils_bonus.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wimam <walidimam69gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 13:54:07 by wimam             #+#    #+#             */
-/*   Updated: 2025/01/08 13:40:48 by wimam            ###   ########.fr       */
+/*   Updated: 2025/01/08 14:54:15 by wimam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,4 +80,34 @@ int is_sign(char c)
 	if (c == '-' || c == '+')
 		return (1);
 	return (0);
+}
+
+int	ft_is_sorted(int *arr, int size)
+{
+	int	i;
+
+	if (size <= 1)
+		return (1);
+	i = 0;
+	while (i < size - 1)
+	{
+		if (arr[i] > arr[i + 1])
+			return (0);
+		i++;
+	}
+	return (1);
+}
+
+int	ft_strcmp(char *s1, char *s2)
+{
+	size_t			i;
+
+	i = 0;
+	while (s1[i] != '\0' && s2[i] != '\0')
+	{
+		if (s1[i] != s2[i])
+			return(0);
+		++i;
+	}
+	return (1);
 }
