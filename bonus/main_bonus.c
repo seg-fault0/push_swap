@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main_bonus.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wimam <walidimam@gmail.com>                +#+  +:+       +#+        */
+/*   By: wimam <walidimam69gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 14:06:00 by wimam             #+#    #+#             */
-/*   Updated: 2025/01/08 21:58:32 by wimam            ###   ########.fr       */
+/*   Updated: 2025/01/09 10:41:10 by wimam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,16 @@ int	ft_event(t_ps *arr, char *str)
 		rra(arr);
 	else if (ft_strcmp(str, "rrb") && arr->size_b > 1)
 		rrb(arr);
+	else if (ft_strcmp(str, "sa"))
+		sa(arr);
+	else if (ft_strcmp(str, "sb"))
+		sb(arr);
+	else if (ft_strcmp(str, "ss"))
+		ss(arr);
+	else if (ft_strcmp(str, "rrr"))
+		rrr(arr);
+	else if (ft_strcmp(str, "rr"))
+		rr(arr);
 	else
 		return (ft_error(4), ft_exit(arr), exit (1), 1);
 	return (0);

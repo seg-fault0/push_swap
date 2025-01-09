@@ -12,9 +12,10 @@ BSRCS =	bonus/ft_exit_bonus.c		\
 		bonus/ft_init_bonus.c		\
 		bonus/get_next_line_utils.c	\
 		bonus/get_next_line.c		\
-		bonus/push.c 				\
-		bonus/rotate.c	 			\
 		bonus/main_bonus.c			\
+		bonus/push_rotate.c			\
+		bonus/rev_rotate.c	 		\
+		bonus/swap.c				\
 		bonus/utils_bonus.c			\
 		bonus/utils2_bonus.c		\
 

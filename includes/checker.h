@@ -6,7 +6,7 @@
 /*   By: wimam <walidimam69gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 14:04:59 by wimam             #+#    #+#             */
-/*   Updated: 2025/01/08 19:28:49 by wimam            ###   ########.fr       */
+/*   Updated: 2025/01/09 10:36:16 by wimam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,10 +46,15 @@ int		ft_strcmp(char *s1, char *s2);
 //instructions
 void	pa(t_ps *arr);
 void	pb(t_ps *arr);
+void	sa(t_ps *arr);
+void	sb(t_ps *arr);
+void	ss(t_ps *arr);
 void	ra(t_ps *arr);
 void	rb(t_ps *arr);
+void	rr(t_ps *arr);
 void	rra(t_ps *arr);
 void	rrb(t_ps *arr);
+void	rrr(t_ps *arr);
 
 
 //GNL

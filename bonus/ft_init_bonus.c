@@ -84,8 +84,6 @@ t_ps	*ft_init(size_t argc, char **argv)
 		return (free(arr), NULL);
 	if (ft_get_arr(arr, argc, argv))
 		return (free(arr->arr_a), free(arr), NULL);
-	if (ft_is_sorted(arr->arr_a, arr->size_a))
-		return (free(arr->arr_a), free(arr), NULL);
 	if (check_dup(arr->arr_a, arr->size_a))
 		return (free(arr->arr_a), free(arr), NULL);
 	arr->arr_b = malloc(arr->size_a * sizeof(int));
