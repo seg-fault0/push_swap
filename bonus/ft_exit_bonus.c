@@ -24,7 +24,7 @@ void	ft_error(unsigned int msg)
 	if (msg == 1)
 		write(2, "ERROR : doubled number\n", 23);
 	else if (msg == 2)
-		write(2, "ERROR : not enough arguments\n", 29);
+		write(2, "ERROR : number outRange INT\n", 28);
 	else if (msg == 3)
 		write(2, "EROOR : some arguments aren't integers\n", 39);
 }

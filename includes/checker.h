@@ -14,6 +14,7 @@
 # define CHECKER_H
 
 # include "get_next_line.h"
+# include <limits.h>
 
 typedef struct s_ps
 {
@@ -29,7 +30,7 @@ void	ft_exit(t_ps *arr);
 void	ft_error(unsigned int msg);
 
 //utils
-int		ft_atoi(char *str);
+long	ft_atoi(char *str);
 void	ft_putstr(char *str);
 int		check_dup(int *arr, size_t size);
 int		is_num(char c);

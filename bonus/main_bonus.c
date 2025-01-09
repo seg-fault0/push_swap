@@ -37,6 +37,8 @@ int	main(int argc, char *argv[])
 	char	*instruction;
 
 	arr = ft_init(argc - 1, argv + 1);
+	if (!arr)
+		return (1);
 	instruction = get_next_line(0);
 	while (instruction)
 	{
