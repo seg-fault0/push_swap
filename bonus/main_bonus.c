@@ -6,7 +6,7 @@
 /*   By: wimam <walidimam69gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 14:06:00 by wimam             #+#    #+#             */
-/*   Updated: 2025/01/09 10:58:57 by wimam            ###   ########.fr       */
+/*   Updated: 2025/01/09 12:20:54 by wimam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int	ft_event(t_ps *arr, char *str)
 	else if (ft_strcmp(str, "rr"))
 		rr(arr);
 	else
-		return (ft_error(4), ft_exit(arr), exit (1), 1);
+		return (ft_error(4), 1);
 	return (0);
 }
 
@@ -49,13 +49,13 @@ int	main(int argc, char *argv[])
 	arr = ft_init(argc - 1, argv + 1);
 	if (!arr)
 		return (1);
-	instruction = get_next_line(0, arr);
+	instruction = gnl(0, arr);
 	while (instruction)
 	{
 		if (ft_event(arr, instruction))
-			break ;
+			return (ft_exit(arr), free(instruction), gnl(0, NULL), 1);
 		free(instruction);
-		instruction = get_next_line(0, arr);
+		instruction = gnl(0, arr);
 	}
 	free(instruction);
 	if (ft_is_sorted(arr->arr_a, arr->size_a) && arr->size_b == 0)
