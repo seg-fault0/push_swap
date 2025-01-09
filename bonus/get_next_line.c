@@ -6,7 +6,7 @@
 /*   By: wimam <walidimam69gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/23 05:04:55 by wimam             #+#    #+#             */
-/*   Updated: 2025/01/09 12:18:45 by wimam            ###   ########.fr       */
+/*   Updated: 2025/01/09 12:31:56 by wimam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -116,6 +116,7 @@ char	*gnl(int fd, t_ps *arr)
 	if (!line)
 		return (NULL);
 	if (*line == '\n')
-		return (free(line), ft_error(5), ft_exit(arr), exit(1), NULL);
+		return (free(line), ft_error(5),
+			free(data), ft_exit(arr), exit(0), NULL);
 	return (line);
 }
