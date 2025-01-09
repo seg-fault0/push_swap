@@ -6,20 +6,20 @@
 /*   By: wimam <walidimam69gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 19:27:13 by wimam             #+#    #+#             */
-/*   Updated: 2025/01/08 19:27:37 by wimam            ###   ########.fr       */
+/*   Updated: 2025/01/09 11:02:36 by wimam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker.h"
 
-int	is_num(char c)
+int	isnb(char c)
 {
 	if (c >= '0' && c <= '9')
 		return (1);
 	return (0);
 }
 
-int	is_sign(char c)
+int	issign(char c)
 {
 	if (c == '-' || c == '+')
 		return (1);

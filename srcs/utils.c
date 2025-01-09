@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wimam <walidimam@gmail.com>                +#+  +:+       +#+        */
+/*   By: wimam <walidimam69gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 13:54:07 by wimam             #+#    #+#             */
-/*   Updated: 2025/01/08 21:14:56 by wimam            ###   ########.fr       */
+/*   Updated: 2025/01/09 11:03:45 by wimam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,14 +48,14 @@ long	ft_atoi(char *str)
 	return (res * sign);
 }
 
-int	is_num(char c)
+int	isnb(char c)
 {
 	if (c >= '0' && c <= '9')
 		return (1);
 	return (0);
 }
 
-int	is_sign(char c)
+int	issign(char c)
 {
 	if (c == '-' || c == '+')
 		return (1);

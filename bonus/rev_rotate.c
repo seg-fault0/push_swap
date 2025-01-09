@@ -6,7 +6,7 @@
 /*   By: wimam <walidimam69gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/02 17:13:08 by wimam             #+#    #+#             */
-/*   Updated: 2025/01/09 10:41:57 by wimam            ###   ########.fr       */
+/*   Updated: 2025/01/09 11:05:27 by wimam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,12 +50,9 @@ void	rrr(t_ps *arr)
 	if (arr->size_a > 1)
 	{
 		tmp = arr->arr_a[arr->size_a - 1];
-		i = arr->size_a - 1;
-		while (i > 0)
-		{
+		i = arr->size_a;
+		while (--i > 0)
 			arr->arr_a[i] = arr->arr_a[i - 1];
-			i--;
-		}
 		arr->arr_a[0] = tmp;
 	}
 	if (arr->size_b > 1)
@@ -80,12 +77,9 @@ void	rr(t_ps *arr)
 	if (arr->size_a > 1)
 	{
 		tmp = arr->arr_a[0];
-		i = 0;
-		while (i < arr->size_a - 1)
-		{
+		i = -1;
+		while (++i < arr->size_a - 1)
 			arr->arr_a[i] = arr->arr_a[i + 1];
-			i++;
-		}
 		arr->arr_a[arr->size_a - 1] = tmp;
 	}
 	if (arr->size_b > 1)

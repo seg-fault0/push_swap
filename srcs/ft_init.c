@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_init.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wimam <walidimam@gmail.com>                +#+  +:+       +#+        */
+/*   By: wimam <walidimam69gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 15:43:22 by wimam             #+#    #+#             */
-/*   Updated: 2025/01/08 21:17:12 by wimam            ###   ########.fr       */
+/*   Updated: 2025/01/09 11:00:32 by wimam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,12 @@ size_t	ft_get_arr_size(size_t count, char **buffer)
 		{
 			while (buffer[i][j] == ' ')
 				j++;
-			if (is_sign(buffer[i][j]))
+			if (issign(buffer[i][j]))
 				j++;
-			if (!is_num(buffer[i][j]))
+			if (!isnb(buffer[i][j]))
 				return (ft_error(3), 0);
 			size++;
-			while (is_num(buffer[i][j]))
+			while (isnb(buffer[i][j]))
 				j++;
 		}
 		i++;
@@ -54,14 +54,14 @@ int	ft_get_arr(t_ps *arr, size_t count, char **buffer)
 		j = 0;
 		while (buffer[i][j])
 		{
-			while (buffer[i][j] && !is_num(buffer[i][j]) && !is_sign(buffer[i][j]))
+			while (buffer[i][j] && !isnb(buffer[i][j]) && !issign(buffer[i][j]))
 				j++;
-			if (buffer[i][j] && (is_num(buffer[i][j]) || is_sign(buffer[i][j])))
+			if (buffer[i][j] && (isnb(buffer[i][j]) || issign(buffer[i][j])))
 				tmp = ft_atoi(&buffer[i][j]);
 			if (tmp > (long) INT_MAX || tmp < (long) INT_MIN)
 				return (ft_error(2), 1);
 			arr->arr_a[a++] = (int) tmp;
-			while (buffer[i][j] && (is_num(buffer[i][j]) || is_sign(buffer[i][j])))
+			while (buffer[i][j] && (isnb(buffer[i][j]) || issign(buffer[i][j])))
 				j++;
 		}
 		i++;

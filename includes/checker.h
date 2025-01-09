@@ -6,7 +6,7 @@
 /*   By: wimam <walidimam69gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 14:04:59 by wimam             #+#    #+#             */
-/*   Updated: 2025/01/09 10:36:16 by wimam            ###   ########.fr       */
+/*   Updated: 2025/01/09 11:00:00 by wimam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,8 @@ void	ft_error(unsigned int msg);
 long	ft_atoi(char *str);
 void	ft_putstr(char *str);
 int		check_dup(int *arr, size_t size);
-int		is_num(char c);
-int		is_sign(char c);
+int		isnb(char c);
+int		issign(char c);
 int		ft_is_sorted(int *arr, int size);
 int		ft_strcmp(char *s1, char *s2);
 
@@ -56,7 +56,6 @@ void	rra(t_ps *arr);
 void	rrb(t_ps *arr);
 void	rrr(t_ps *arr);
 
-
 //GNL
 int		ft_strlen(char *str);
 char	*ft_strljoin(char *s1, char *s2, int size);
@@ -64,6 +63,5 @@ int		ft_new_line_check(char *str);
 char	*ft_init_buffer(char *str);
 char	*ft_strdup(char *s);
 char	*get_next_line(int fd, t_ps *arr);
-
 
 #endif

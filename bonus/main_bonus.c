@@ -6,7 +6,7 @@
 /*   By: wimam <walidimam69gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 14:06:00 by wimam             #+#    #+#             */
-/*   Updated: 2025/01/09 10:41:10 by wimam            ###   ########.fr       */
+/*   Updated: 2025/01/09 10:58:57 by wimam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ int	main(int argc, char *argv[])
 	instruction = get_next_line(0, arr);
 	while (instruction)
 	{
-		if(ft_event(arr, instruction))
+		if (ft_event(arr, instruction))
 			break ;
 		free(instruction);
 		instruction = get_next_line(0, arr);

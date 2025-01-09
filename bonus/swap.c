@@ -6,7 +6,7 @@
 /*   By: wimam <walidimam69gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/09 10:36:00 by wimam             #+#    #+#             */
-/*   Updated: 2025/01/09 10:36:01 by wimam            ###   ########.fr       */
+/*   Updated: 2025/01/09 10:53:34 by wimam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void	sb(t_ps *arr)
 
 void	ss(t_ps *arr)
 {
-	int tmp;
+	int	tmp;
 
 	tmp = arr->arr_a[0];
 	arr->arr_a[0] = arr->arr_a[1];
@@ -42,5 +42,5 @@ void	ss(t_ps *arr)
 	tmp = arr->arr_b[0];
 	arr->arr_b[0] = arr->arr_b[1];
 	arr->arr_b[1] = tmp;
-	ft_putstr("(ss)\n");
+	ft_putstr("ss\n");
 }
