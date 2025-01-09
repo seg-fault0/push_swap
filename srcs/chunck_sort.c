@@ -6,7 +6,7 @@
 /*   By: wimam <walidimam69gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/02 17:09:51 by wimam             #+#    #+#             */
-/*   Updated: 2025/01/08 11:26:30 by wimam            ###   ########.fr       */
+/*   Updated: 2025/01/09 11:57:17 by wimam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,19 +33,19 @@ void	ft_push_chunk(t_ps *arr, int limit, int average)
 	}
 }
 
-void	ft_push_to_b(t_ps *arr)
+void	ft_push_to_b(t_ps *arr,size_t chunck_size)
 {
 	int	limit;
 	int	dif;
 	int	average;
 
-	limit = ft_get_limit(arr->arr_a, arr->size_a, 20);
+	limit = ft_get_limit(arr->arr_a, arr->size_a, chunck_size);
 	dif = limit - arr->arr_a[ft_get_min_index(arr->arr_a, arr->size_a)];
 	average = limit - (dif / 2);
 	while (arr->size_a > 0)
 	{
 		ft_push_chunk(arr, limit, average);
-		limit = ft_get_limit(arr->arr_a, arr->size_a, 20);
+		limit = ft_get_limit(arr->arr_a, arr->size_a, chunck_size);
 		dif = limit - arr->arr_a[ft_get_min_index(arr->arr_a, arr->size_a)];
 		average = limit - (dif / 2);
 	}
@@ -75,9 +75,9 @@ void	ft_push_to_a(t_ps *arr)
 	}
 }
 
-void	chuck_sort(t_ps *arr)
+void	chuck_sort(t_ps *arr, size_t chunck_size)
 {
-	ft_push_to_b(arr);
+	ft_push_to_b(arr, chunck_size);
 	ft_push_to_a(arr);
 }
 
