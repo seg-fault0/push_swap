@@ -27,7 +27,7 @@ int	ft_event(t_ps *arr, char *str)
 	else if (ft_strcmp(str, "rrb") && arr->size_b > 1)
 		rrb(arr);
 	else
-		return (1);
+		return (ft_error(4), 1);
 	return (0);
 }
 
@@ -42,7 +42,8 @@ int	main(int argc, char *argv[])
 	instruction = get_next_line(0);
 	while (instruction)
 	{
-		ft_event(arr, instruction);
+		if(ft_event(arr, instruction))
+			break ;
 		free(instruction);
 		instruction = get_next_line(0);
 	}

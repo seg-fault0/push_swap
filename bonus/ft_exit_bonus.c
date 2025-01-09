@@ -27,4 +27,6 @@ void	ft_error(unsigned int msg)
 		write(2, "ERROR : number outRange INT\n", 28);
 	else if (msg == 3)
 		write(2, "EROOR : some arguments aren't integers\n", 39);
+	else if (msg == 4)
+		write(2, "EROOR : invalid instruction\n", 28);
 }
