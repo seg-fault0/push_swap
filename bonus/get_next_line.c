@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "checker.h"
 
 static char	*ft_read(int fd)
 {
@@ -101,7 +101,7 @@ static char	*ft_update_data(char *text)
 	return (new_text);
 }
 
-char	*get_next_line(int fd)
+char	*get_next_line(int fd, t_ps *arr)
 {
 	static char	*data;
 	char		*line;
@@ -114,6 +114,6 @@ char	*get_next_line(int fd)
 	if (!line)
 		return (NULL);
 	if (*line == '\n')
-		return (free(line), NULL);
+		return (free(line), ft_error(5), ft_exit(arr), exit(1), NULL);
 	return (line);
 }

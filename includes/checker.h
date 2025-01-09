@@ -13,8 +13,13 @@
 #ifndef CHECKER_H
 # define CHECKER_H
 
-# include "get_next_line.h"
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 1
+# endif
+
 # include <limits.h>
+# include <unistd.h>
+# include <stdlib.h>
 
 typedef struct s_ps
 {
@@ -45,5 +50,15 @@ void	ra(t_ps *arr);
 void	rb(t_ps *arr);
 void	rra(t_ps *arr);
 void	rrb(t_ps *arr);
+
+
+//GNL
+int		ft_strlen(char *str);
+char	*ft_strljoin(char *s1, char *s2, int size);
+int		ft_new_line_check(char *str);
+char	*ft_init_buffer(char *str);
+char	*ft_strdup(char *s);
+char	*get_next_line(int fd, t_ps *arr);
+
 
 #endif

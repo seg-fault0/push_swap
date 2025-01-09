@@ -28,5 +28,7 @@ void	ft_error(unsigned int msg)
 	else if (msg == 3)
 		write(2, "EROOR : some arguments aren't integers\n", 39);
 	else if (msg == 4)
-		write(2, "EROOR : invalid instruction\n", 28);
+		write(2, "EROOR : invalid or can't execute instruction\n", 45);
+	else if (msg == 5)
+		write(2, "EROOR : multiple new lines\n", 27);
 }

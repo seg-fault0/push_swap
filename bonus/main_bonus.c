@@ -27,7 +27,7 @@ int	ft_event(t_ps *arr, char *str)
 	else if (ft_strcmp(str, "rrb") && arr->size_b > 1)
 		rrb(arr);
 	else
-		return (ft_error(4), 1);
+		return (ft_error(4), ft_exit(arr), exit (1), 1);
 	return (0);
 }
 
@@ -39,13 +39,13 @@ int	main(int argc, char *argv[])
 	arr = ft_init(argc - 1, argv + 1);
 	if (!arr)
 		return (1);
-	instruction = get_next_line(0);
+	instruction = get_next_line(0, arr);
 	while (instruction)
 	{
 		if(ft_event(arr, instruction))
 			break ;
 		free(instruction);
-		instruction = get_next_line(0);
+		instruction = get_next_line(0, arr);
 	}
 	free(instruction);
 	if (ft_is_sorted(arr->arr_a, arr->size_a) && arr->size_b == 0)
