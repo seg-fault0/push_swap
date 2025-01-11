@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   rev_rotate.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wimam <walidimam69gmail.com>               +#+  +:+       +#+        */
+/*   By: wimam <walidimam@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/02 17:13:08 by wimam             #+#    #+#             */
-/*   Updated: 2025/01/09 13:08:20 by wimam            ###   ########.fr       */
+/*   Updated: 2025/01/11 22:54:27 by wimam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "checker.h"
 
 void	rrb(t_ps *arr)
 {
