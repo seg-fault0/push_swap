@@ -6,7 +6,7 @@
 /*   By: wimam <walidimam69gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 13:54:14 by wimam             #+#    #+#             */
-/*   Updated: 2025/01/09 11:56:26 by wimam            ###   ########.fr       */
+/*   Updated: 2025/02/05 14:17:38 by wimam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,9 +35,9 @@ int		issign(char c);
 int		ft_is_sorted(int *arr, int size);
 
 //get
-size_t	ft_get_min_index(int *arr, size_t size);
-size_t	ft_get_max_index(int *arr, size_t size);
-int		ft_get_limit(int *arr, size_t size, int max);
+size_t	get_min_nbr_i(int *arr, size_t size);
+size_t	get_max_nbr_i(int *arr, size_t size);
+int		get_nth_big_nbr(int *arr, size_t size, int max);
 int		find_nth_smallest(int *arr, int size, int n);
 
 //instructions

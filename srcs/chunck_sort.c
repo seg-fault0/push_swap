@@ -6,7 +6,7 @@
 /*   By: wimam <walidimam69gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/02 17:09:51 by wimam             #+#    #+#             */
-/*   Updated: 2025/01/09 12:00:04 by wimam            ###   ########.fr       */
+/*   Updated: 2025/02/05 14:19:10 by wimam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,14 +39,14 @@ void	ft_push_to_b(t_ps *arr, size_t chunck_size)
 	int	dif;
 	int	average;
 
-	limit = ft_get_limit(arr->arr_a, arr->size_a, chunck_size);
-	dif = limit - arr->arr_a[ft_get_min_index(arr->arr_a, arr->size_a)];
+	limit = get_nth_big_nbr(arr->arr_a, arr->size_a, chunck_size);
+	dif = limit - arr->arr_a[get_min_nbr_i(arr->arr_a, arr->size_a)];
 	average = limit - (dif / 2);
 	while (arr->size_a > 0)
 	{
 		ft_push_chunk(arr, limit, average);
-		limit = ft_get_limit(arr->arr_a, arr->size_a, chunck_size);
-		dif = limit - arr->arr_a[ft_get_min_index(arr->arr_a, arr->size_a)];
+		limit = get_nth_big_nbr(arr->arr_a, arr->size_a, chunck_size);
+		dif = limit - arr->arr_a[get_min_nbr_i(arr->arr_a, arr->size_a)];
 		average = limit - (dif / 2);
 	}
 }
@@ -58,7 +58,7 @@ void	ft_push_to_a(t_ps *arr)
 
 	while (arr->size_b > 0)
 	{
-		maxi = ft_get_max_index(arr->arr_b, arr->size_b);
+		maxi = get_max_nbr_i(arr->arr_b, arr->size_b);
 		max_nbr = arr->arr_b[maxi];
 		while (1 == 1)
 		{

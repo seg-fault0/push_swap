@@ -6,13 +6,13 @@
 /*   By: wimam <walidimam69gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 11:38:36 by wimam             #+#    #+#             */
-/*   Updated: 2025/01/08 19:25:38 by wimam            ###   ########.fr       */
+/*   Updated: 2025/02/05 14:18:16 by wimam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-size_t	ft_get_min_index(int *arr, size_t size)
+size_t	get_min_nbr_i(int *arr, size_t size)
 {
 	size_t	i;
 	size_t	min_index;
@@ -28,7 +28,7 @@ size_t	ft_get_min_index(int *arr, size_t size)
 	return (min_index);
 }
 
-size_t	ft_get_max_index(int *arr, size_t size)
+size_t	get_max_nbr_i(int *arr, size_t size)
 {
 	size_t	i;
 	size_t	max_index;
@@ -44,7 +44,7 @@ size_t	ft_get_max_index(int *arr, size_t size)
 	return (max_index);
 }
 
-int	ft_get_limit(int *arr, size_t size, int max)
+int	get_nth_big_nbr(int *arr, size_t size, int max)
 {
 	size_t	i;
 	size_t	j;
