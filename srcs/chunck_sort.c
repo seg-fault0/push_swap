@@ -6,22 +6,27 @@
 /*   By: wimam <walidimam69gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/02 17:09:51 by wimam             #+#    #+#             */
-/*   Updated: 2025/02/05 14:19:10 by wimam            ###   ########.fr       */
+/*   Updated: 2025/02/07 16:06:59 by wimam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ft_push_chunk(t_ps *arr, int limit, int average)
+void	ft_push_chunk(t_ps *arr, int limit, int average, size_t chunck_size)
 {
 	size_t	i;
+	size_t	count;
 
 	i = 0;
+	count = 0;
 	while (i < arr->size_a)
 	{
+		if (count >= chunck_size)
+			break ;
 		if (arr->arr_a[0] <= limit)
 		{
 			pb(arr);
+			count++;
 			if (arr->arr_b[0] <= average)
 				rb(arr);
 		}
@@ -44,7 +49,7 @@ void	ft_push_to_b(t_ps *arr, size_t chunck_size)
 	average = limit - (dif / 2);
 	while (arr->size_a > 0)
 	{
-		ft_push_chunk(arr, limit, average);
+		ft_push_chunk(arr, limit, average, chunck_size);
 		limit = get_nth_big_nbr(arr->arr_a, arr->size_a, chunck_size);
 		dif = limit - arr->arr_a[get_min_nbr_i(arr->arr_a, arr->size_a)];
 		average = limit - (dif / 2);
