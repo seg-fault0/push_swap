@@ -6,7 +6,7 @@
 /*   By: wimam <walidimam69gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/15 00:38:20 by wimam             #+#    #+#             */
-/*   Updated: 2025/02/15 01:03:01 by wimam            ###   ########.fr       */
+/*   Updated: 2025/02/15 21:22:18 by wimam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,11 @@ void	my_sort(t_ps *arr)
 		return (sa(arr));
 	if (arr->arr_a[0] < arr->arr_a[1] && max == arr->arr_a[2])
 		return ;
-	sa(arr);
-	ra(arr);
+	if (arr->arr_a[1] == max)
+	{
+		sa(arr);
+		ra(arr);
+	}
+	if (arr->arr_a[0] > arr->arr_a[1])
+		sa(arr);
 }
