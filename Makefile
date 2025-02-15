@@ -3,6 +3,7 @@ SRCS =	srcs/arr_utils.c		\
 		srcs/ft_exit.c			\
 		srcs/ft_init.c			\
 		srcs/main.c 			\
+		srcs/my_sort.c			\
 		srcs/push.c 			\
 		srcs/rotate.c 			\
 		srcs/selection_sort.c	\
