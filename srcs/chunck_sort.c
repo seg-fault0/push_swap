@@ -6,7 +6,7 @@
 /*   By: wimam <walidimam69gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/02 17:09:51 by wimam             #+#    #+#             */
-/*   Updated: 2025/02/07 16:06:59 by wimam            ###   ########.fr       */
+/*   Updated: 2025/02/15 01:20:50 by wimam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,8 +80,14 @@ void	ft_push_to_a(t_ps *arr)
 	}
 }
 
-void	chuck_sort(t_ps *arr, size_t chunck_size)
+void	chunck_sort(t_ps *arr)
 {
+	int	chunck_size;
+
+	if (arr->size_a <= 250)
+		chunck_size = 20;
+	else
+		chunck_size = 70;
 	ft_push_to_b(arr, chunck_size);
 	ft_push_to_a(arr);
 }

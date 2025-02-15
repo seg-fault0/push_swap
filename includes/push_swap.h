@@ -6,7 +6,7 @@
 /*   By: wimam <walidimam69gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 13:54:14 by wimam             #+#    #+#             */
-/*   Updated: 2025/02/15 00:26:05 by wimam            ###   ########.fr       */
+/*   Updated: 2025/02/15 01:20:38 by wimam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ void	rrb(t_ps *arr);
 void	rra(t_ps *arr);
 
 //sort
-void	chuck_sort(t_ps *arr, size_t chunk_size);
+void	chunck_sort(t_ps *arr);
 void	selection_sort(t_ps *arr);
 void	my_sort(t_ps *arr);
 

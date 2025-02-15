@@ -6,7 +6,7 @@
 /*   By: wimam <walidimam69gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 13:53:48 by wimam             #+#    #+#             */
-/*   Updated: 2025/02/15 00:27:54 by wimam            ###   ########.fr       */
+/*   Updated: 2025/02/15 01:20:42 by wimam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,8 @@ void	ft_sort(t_ps *arr)
 		my_sort(arr);
 	else if (arr->size_a < 20)
 		selection_sort(arr);
-	else if (arr->size_a <= 250)
-		chuck_sort(arr, 20);
 	else
-		chuck_sort(arr, 70);
+		chunck_sort(arr);
 }
 
 int	main(int argc, char *argv[])
