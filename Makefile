@@ -9,16 +9,16 @@ SRCS =	srcs/arr_utils.c		\
 		srcs/selection_sort.c	\
 		srcs/utils.c			\
 
-BSRCS =	bonus/ft_exit_bonus.c		\
-		bonus/ft_init_bonus.c		\
-		bonus/get_next_line_utils.c	\
-		bonus/get_next_line.c		\
-		bonus/main_bonus.c			\
-		bonus/push_rotate.c			\
-		bonus/rev_rotate.c	 		\
-		bonus/swap.c				\
-		bonus/utils_bonus.c			\
-		bonus/utils2_bonus.c		\
+BSRCS =	bonus/ft_exit_bonus.c				\
+		bonus/ft_init_bonus.c				\
+		bonus/get_next_line_utils_bonus.c	\
+		bonus/get_next_line_bonus.c			\
+		bonus/main_bonus.c					\
+		bonus/push_rotate_bonus.c			\
+		bonus/rev_rotate_bonus.c			\
+		bonus/swap_bonus.c					\
+		bonus/utils_bonus.c					\
+		bonus/utils2_bonus.c				\
 
 OBG = $(SRCS:.c=.o)
 BOBG = $(BSRCS:.c=.o)
