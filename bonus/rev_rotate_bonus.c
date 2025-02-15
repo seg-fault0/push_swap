@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rev_rotate.c                                       :+:      :+:    :+:   */
+/*   rev_rotate_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wimam <walidimam@gmail.com>                +#+  +:+       +#+        */
+/*   By: wimam <walidimam69gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/02 17:13:08 by wimam             #+#    #+#             */
-/*   Updated: 2025/01/11 22:54:27 by wimam            ###   ########.fr       */
+/*   Updated: 2025/02/15 01:04:33 by wimam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ void	rrb(t_ps *arr)
 		i--;
 	}
 	arr->arr_b[0] = tmp;
+	ft_putstr("rrb\n");
 }
 
 void	rra(t_ps *arr)
@@ -40,6 +41,7 @@ void	rra(t_ps *arr)
 		i--;
 	}
 	arr->arr_a[0] = tmp;
+	ft_putstr("rra\n");
 }
 
 void	rrr(t_ps *arr)
@@ -66,6 +68,7 @@ void	rrr(t_ps *arr)
 		}
 		arr->arr_b[0] = tmp;
 	}
+	ft_putstr("rrr\n");
 }
 
 void	rr(t_ps *arr)
@@ -92,4 +95,5 @@ void	rr(t_ps *arr)
 		}
 		arr->arr_b[arr->size_b - 1] = tmp;
 	}
+	ft_putstr("rr\n");
 }
