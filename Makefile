@@ -37,10 +37,10 @@ $(NAME) : $(OBG)
 $(BNAME) : $(BOBG)
 	cc $(BOBG) -o $@
 
-$(OBG) : %.o : %.c
-	cc -c $(FLAGS) $(I) $^ -o $@
-$(BOBG) : %.o : %.c
-	cc -c $(FLAGS) $(I) $^ -o $@
+$(OBG) : %.o : %.c ./includes/push_swap.h
+	cc -c $(FLAGS) $(I) $< -o $@
+$(BOBG) : %.o : %.c ./includes/checker.h
+	cc -c $(FLAGS) $(I) $< -o $@
 
 clean:
 	rm -f $(OBG) $(BOBG)

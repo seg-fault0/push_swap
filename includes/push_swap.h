@@ -6,7 +6,7 @@
 /*   By: wimam <walidimam69gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 13:54:14 by wimam             #+#    #+#             */
-/*   Updated: 2025/02/15 01:20:38 by wimam            ###   ########.fr       */
+/*   Updated: 2025/02/21 22:53:21 by wimam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,6 @@ int		ft_is_sorted(int *arr, int size);
 size_t	get_min_nbr_i(int *arr, size_t size);
 size_t	get_max_nbr_i(int *arr, size_t size);
 int		get_nth_big_nbr(int *arr, size_t size, int max);
-int		find_nth_smallest(int *arr, int size, int n);
 
 //instructions
 void	pa(t_ps *arr);
