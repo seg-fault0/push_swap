@@ -6,7 +6,7 @@
 /*   By: wimam <walidimam69gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 15:43:22 by wimam             #+#    #+#             */
-/*   Updated: 2025/02/21 05:51:17 by wimam            ###   ########.fr       */
+/*   Updated: 2025/02/21 23:06:59 by wimam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,9 +95,9 @@ t_ps	*ft_init(size_t argc, char **argv)
 		return (free(arr), NULL);
 	if (ft_get_arr(arr, argc, argv))
 		return (free(arr->arr_a), free(arr), NULL);
-	if (ft_is_sorted(arr->arr_a, arr->size_a))
-		return (free(arr->arr_a), free(arr), NULL);
 	if (check_dup(arr->arr_a, arr->size_a))
+		return (free(arr->arr_a), free(arr), NULL);
+	if (ft_is_sorted(arr->arr_a, arr->size_a))
 		return (free(arr->arr_a), free(arr), NULL);
 	arr->arr_b = malloc(arr->size_a * sizeof(int));
 	if (!arr->arr_b)
