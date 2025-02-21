@@ -6,11 +6,21 @@
 /*   By: wimam <walidimam69gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 15:43:22 by wimam             #+#    #+#             */
-/*   Updated: 2025/02/21 04:16:57 by wimam            ###   ########.fr       */
+/*   Updated: 2025/02/21 05:51:17 by wimam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+size_t	skip_space(char *str)
+{
+	size_t	i;
+
+	i = 0;
+	while (str[i] == ' ')
+		i++;
+	return (i);
+}
 
 size_t	ft_get_arr_size(size_t count, char **buffer)
 {
@@ -25,8 +35,7 @@ size_t	ft_get_arr_size(size_t count, char **buffer)
 		j = 0;
 		while (buffer[i][j])
 		{
-			while (buffer[i][j] == ' ')
-				j++;
+			j += skip_space(&buffer[i][j]);
 			if (issign(buffer[i][j]))
 				j++;
 			if (!isnb(buffer[i][j]))
@@ -35,6 +44,7 @@ size_t	ft_get_arr_size(size_t count, char **buffer)
 				size++;
 			while (isnb(buffer[i][j]))
 				j++;
+			j += skip_space(&buffer[i][j]);
 		}
 		i++;
 	}
@@ -55,15 +65,15 @@ int	ft_get_arr(t_ps *arr, size_t count, char **buffer)
 		j = 0;
 		while (buffer[i][j])
 		{
-			while (buffer[i][j] && !isnb(buffer[i][j]) && !issign(buffer[i][j]))
-				j++;
-			if (buffer[i][j] && (isnb(buffer[i][j]) || issign(buffer[i][j])))
+			j += skip_space(&buffer[i][j]);
+			if (isnb(buffer[i][j]) || issign(buffer[i][j]))
 				tmp = ft_atoi(&buffer[i][j]);
 			if (tmp > (long) INT_MAX || tmp < (long) INT_MIN)
 				return (ft_error(2), 1);
 			arr->arr_a[a++] = (int) tmp;
-			while (buffer[i][j] && (isnb(buffer[i][j]) || issign(buffer[i][j])))
+			while (isnb(buffer[i][j]) || issign(buffer[i][j]))
 				j++;
+			j += skip_space(&buffer[i][j]);
 		}
 		i++;
 	}

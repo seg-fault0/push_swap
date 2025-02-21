@@ -43,13 +43,9 @@ $(BOBG) : %.o : %.c
 	cc -c $(FLAGS) $(I) $^ -o $@
 
 clean:
-	rm -f $(OBG)
-bclean:
-	rm -f $(BOBG)
+	rm -f $(OBG) $(BOBG)
 
 fclean : clean
-	rm -f $(NAME)
-bfclean : bclean
-	rm -r $(BNAME)
+	rm -f $(NAME) $(BNAME)
 
 .PHONY : clean bclean
