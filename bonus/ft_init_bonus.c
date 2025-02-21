@@ -6,7 +6,7 @@
 /*   By: wimam <walidimam69gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 15:43:22 by wimam             #+#    #+#             */
-/*   Updated: 2025/02/15 01:10:18 by wimam            ###   ########.fr       */
+/*   Updated: 2025/02/21 04:18:03 by wimam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,14 +25,15 @@ size_t	ft_get_arr_size(size_t count, char **buffer)
 		j = 0;
 		while (buffer[i][j])
 		{
-			while (buffer[i][j] == ' ' && buffer[i][j])
+			while (buffer[i][j] == ' ')
 				j++;
-			if (issign(buffer[i][j]) && buffer[i][j])
+			if (issign(buffer[i][j]))
 				j++;
-			if (!isnb(buffer[i][j]) && buffer[i][j])
+			if (!isnb(buffer[i][j]))
 				return (ft_error(3), 0);
-			size++;
-			while (isnb(buffer[i][j]) && buffer[i][j])
+			if (buffer[i][j])
+				size++;
+			while (isnb(buffer[i][j]))
 				j++;
 		}
 		i++;
