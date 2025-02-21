@@ -48,4 +48,7 @@ clean:
 fclean : clean
 	rm -f $(NAME) $(BNAME)
 
+re : fclean all
+bre : fclean bonus
+
 .PHONY : clean bclean
